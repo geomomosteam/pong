@@ -5,7 +5,7 @@ function Ball() {
   this.height = 20
 
   this.reset()
-  this.blipper = ["0","1","0","0","0","0","1","0","0","0","0","0","0","1","1","0","0","0","0","0","0","1","0","1","1","1","0","0","1","1","0","0","0","0","0","0","0","1"];
+  this.blipper = [6,3,4,2,8,4,9,2,6,44,20,10,50,11,21,20,30,40,50,60,70,7,100,101,17,19,22,24,21,31,80,4,84,26,260,2600,72,1];
 
   // Load sound
   this.blip = new Audio()
@@ -69,7 +69,7 @@ Ball.prototype.update = function() {
     this.yVelocity *= 1
 //    Transfer some of the paddle vertical velocity to the ball
 //    this.yVelocity += hitter.yVelocity / 4
-    if (this.blipper[this.rounds % this.blipper.length] === "0") {
+    if ( (this.blipper[this.rounds % this.blipper.length]) % 2 === 0) {
      this.blip.play()
 	} else {
      this.blop.play()
