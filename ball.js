@@ -80,7 +80,7 @@ Ball.prototype.update = function() {
   // Rebound if it hits top or bottom
   if (this.y < 0 || this.y + this.height > game.height) {
     this.yVelocity *= -1 // rebound, switch direction
-    this.blip.play()
+    // this.blip.play()
   }
 
   // Off screen on left. Bot wins.
