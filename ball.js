@@ -10,16 +10,16 @@ function Ball() {
   // Load sound
   this.blip = new Audio()
   if (this.blip.canPlayType('audio/mpeg')) {
-    this.blip.src = 'blip.mp3'
+    this.blip.src = './blip.mp3'
   } else {
-    this.blip.src = 'blip.ogg'
+    this.blip.src = './blip.ogg'
   }
   
   this.blop = new Audio()
   if (this.blop.canPlayType('audio/mpeg')) {
-    this.blop.src = 'blop.mp3'
+    this.blop.src = './blop.mp3'
   } else {
-    this.blop.src = 'blop.ogg'	
+    this.blop.src = './blop.ogg'	
   } 
 }
 
@@ -63,7 +63,6 @@ Ball.prototype.update = function() {
 
   // Hits a paddle.
   if (hitter) {
-//    JLM original
 //    this.xVelocity *= -1.1 // Rebound and increase speed
 //    this.yVelocity *= 1.1
     this.xVelocity *= -1

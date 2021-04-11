@@ -9,8 +9,6 @@ Background.prototype.draw = function(context) {
   context.font = "40px monospace"
   context.fillText(game.player.score, game.width * 3 / 8, 50)
   context.fillText(game.bot.score,    game.width * 5 / 8, 50)
-  // JLM context.fillText(game.ball.rounds,  game.width * 6 / 8, 50)
-  // JLM context.fillText(game.ball.blipper[game.ball.rounds],  game.width	* 7 / 8, 50)
 }
 
 
